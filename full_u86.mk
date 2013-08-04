@@ -34,16 +34,16 @@ PRODUCT_PACKAGES += \
 
 # Graphics
 PRODUCT_PACKAGES += \
-    copybit.msm7627a \
-    gralloc.msm7627a \
-    hwcomposer.msm7627a \
+    copybit.msm7x27a \
+    gralloc.msm7x27a \
+    hwcomposer.msm7x27a \
     libtilerenderer
 
 # Audio
 PRODUCT_PACKAGES += \
     audio.a2dp.default \
-    audio_policy.msm7627a \
-    audio.primary.msm7627a \
+    audio_policy.msm7x27a \
+    audio.primary.msm7x27a \
     libaudioutils
 
 # Bluez
@@ -59,7 +59,7 @@ PRODUCT_PACKAGES += \
 # GPS
 PRODUCT_PACKAGES += \
     dexpreopt \
-    gps.msm7627a \
+    gps.msm7x27a \
     libloc_api-rpc \
     Camera
 
