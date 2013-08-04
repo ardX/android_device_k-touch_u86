@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+/*
+** Copyright (c) 2012 Qualcomm Technologies, Inc. 
+** All Rights Reserved.
+** Qualcomm Technologies Proprietary and Confidential.
+**
+*/
+-->
+<default version="1.3">
+	<global enable="0" logtype="1" loglevel="0" time="0" size="10000000" log_path="/sdcard/logs"/>
+	<AdbMain logname="AdbMain" enable="0" logtype="194" log_provider="/dev/log/main;/dev/log/system" log_filepath="adb/adb-main-system.log"/>
+	<AdbRadio logname="AdbRadio" enable="0" logtype="2" log_provider="/dev/log/radio" log_filepath="adb/adb-radio.log"/>
+	<AdbEvents logname="AdbEvents" enable="0" logtype="2" log_provider="/dev/log/events" log_filepath="adb/adb-events.log"/>
+	<Dmesg logname="Dmesg" enable="0" logtype="1" log_provider="/dev/kmsg" log_filepath="dmesg/dmesg.log"/>
+	<QXDM logname="QXDM" enable="0" logtype="64" log_provider="/system/bin/diag_mdlog" log_filepath="qxdm/qxdm.log"/>
+	<Crash logname="Crash" enable="1"/>
+	<WlanTcp logname="WlanTcp" enable="0" logtype="128" log_provider="tcpdump -i wlan0 -nnXSs 96 -w -" log_filepath="tcp/wifi.log"/>
+	<DataTcp logname="DataTcp" enable="0" logtype="128" log_provider="tcpdump -i rmnet0 -nnXSs 96 -w -" log_filepath="tcp/dataservice.log"/>
+	<Bluetooth logname="Bluetooth" enable="0" logtype="128" log_provider="hcidump -t" log_filepath="bluetooth/hci.log"/>
+	<KernelEvent logname="KernelEvent" enable="0" logtype="3" log_provider="/mnt/debugfs/sm_event/sm_event_log" log_filepath="kernelevent/kernelevent.log"/>
+	<WiFi logname="WiFi" enable="0" logtype="4" log_provider="/mnt/debugfs/ieee80211/phy0/ath6kl/fwlog_block" log_filepath="wifi/fw.log"/>
+</default>
