@@ -2,15 +2,8 @@
 # The filesystem that contains the filesystem checker binary (typically /system) cannot
 # specify MF_CHECK, and must come before any filesystems that do specify MF_CHECK
 
-#<src>					  <mnt_point>  		<type>  <mnt_flags and options>                     <fs_mgr_flags>
-/dev/block/platform/msm_sdcc.3/by-num/p17  /system      	ext4    ro,barrier=1                                wait
-/dev/block/platform/msm_sdcc.3/by-num/p18  /cache       	ext4    nosuid,nodev,barrier=1                      wait,check
-/dev/block/platform/msm_sdcc.3/by-num/p21  /data        	ext4    nosuid,nodev,barrier=1,noauto_da_alloc      wait,encryptable=footer
+#TODO: Add 'check' as fs_mgr_flags with data partition.
+# Currently we dont have e2fsck compiled. So fs check would failed.
 
-#/dev/block/mmcblk0p17			   /system      	ext4    ro,barrier=1                                wait
-#/dev/block/mmcblk0p18			   /cache       	ext4    nosuid,nodev,barrier=1                      wait,check
-#/dev/block/mmcblk0p21			   /data        	ext4    nosuid,nodev,barrier=1,noauto_da_alloc      wait,encryptable=footer
-
-#/devices/platform/msm_sdcc.3/mmc_host/mmc0 /storage/sdcard0   	auto    defaults                                    voldmanaged=sdcard:20
-#/devices/platform/msm_sdcc.1/mmc_host      /storage/sdcard1   	auto    defaults                                    voldmanaged=sdcard:auto
-#/devices/platform/msm_hsusb_host.0/usb1    /storage/usbdisk0  	auto    defaults                                    voldmanaged=usbdisk:auto
+#<src>                                          <mnt_point>  <type>  <mnt_flags and options>                     <fs_mgr_flags>
+/dev/block/platform/msm_sdcc.3/by-num/p21         /data        ext4    nosuid,nodev,barrier=1,noauto_da_alloc     wait,encryptable=footer
