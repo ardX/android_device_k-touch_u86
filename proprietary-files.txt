@@ -35,6 +35,7 @@ lib/libchromatix_ov9726_preview.so
 lib/libgemini.so
 lib/libmmipl.so
 lib/libmmjpeg.so
+lib/libmmstillomx.so
 lib/liboemcamera.so
 lib/hw/camera.msm7627a.so
 
